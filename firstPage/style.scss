@@ -204,19 +204,34 @@ body {
   li {
     display: inline;
     padding-right: 30px;
+    a:hover {
+      svg path {
+        fill: #AA182C;
+      }
+    }
   }
 }
 
 .dropdown {
   padding-right: 85px;
+  &::after {
+    content: '';
+    width: 6px;
+    height: 3px;
+    display: inline-block;
+    margin-bottom: 4px;
+    background: url('./img/nav_icon/header-lang-arrow.svg');
+  }
 
   .dropbtn {
     color: #40474E;
+  }
 
-    &:hover {
-      .dropdown-content {
-        display: block;
-      }
+  .dropdown-content {
+    padding-top: 10px;
+    a {
+      color: #40474E;
+      text-decoration: none;
     }
   }
 
